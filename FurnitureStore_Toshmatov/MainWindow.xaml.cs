@@ -23,6 +23,18 @@ namespace FurnitureStore_Toshmatov
         public MainWindow()
         {
             InitializeComponent();
+
+            OpenPage(new Pages.Main());
+        }
+
+        /// <summary>
+        /// Функция открытия страниц
+        /// </summary>
+        /// <param name="page">Страница которую необходимо открыть</param>
+        public void OpenPage(Page page)
+        {
+            frame.Navigate(page);
         }
     }
 }
+     

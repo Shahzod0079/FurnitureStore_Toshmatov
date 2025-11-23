@@ -20,7 +20,7 @@ namespace FurnitureStore_Toshmatov.Elements
     /// </summary>
     public partial class Item : UserControl
     {
-        public Item()
+        public Item(Pages.Item item)
         {
             InitializeComponent();
         }

@@ -9,7 +9,7 @@
     <Grid Width="200">
         <Grid Margin="15,15,15,15" Background="#FFFFFF" Height="300" Width="170">
             <Image x:Name="image" Margin="0,0,-1,120" Stretch="UniformToFill" 
-                   Source="C:\Users\student-a502.PERMAVIAT\source\repos\FurnitureStore_Toshmatov\FurnitureStore_Toshmatov\Pages\background.jpg"/>
+                   Source="C:\Users\ЗС\Source\Repos\FurnitureStore_Toshmatov\FurnitureStore_Toshmatov\Pages\background.jpg"/>
             <Label x:Name="price" Content="3000 р." Margin="10,180,10,94" 
                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
                    FontWeight="Bold" Foreground="Black"/>
