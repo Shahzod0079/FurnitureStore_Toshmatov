@@ -3,14 +3,13 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:FurnitureStore_Toshmatov.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Main">
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\ЗС\Source\Repos\FurnitureStore_Toshmatov\FurnitureStore_Toshmatov\Pages\background.jpg"/>
+            <ImageBrush ImageSource="/Pages/background.jpg"/>
         </Grid.Background>
 
         <Grid.Resources>
@@ -20,6 +19,7 @@
                 <Setter Property="BorderBrush" Value="#FFABADB3"/>
             </Style>
         </Grid.Resources>
+
         <Grid VerticalAlignment="Top" Height="50" Background="#7F000000">
             <Grid.Resources>
                 <Style TargetType="{x:Type Button}">
@@ -30,9 +30,10 @@
             </Grid.Resources>
 
             <Image Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="10,10,0,0" Source="C:\Users\ЗС\Source\Repos\FurnitureStore_Toshmatov\FurnitureStore_Toshmatov\Pages\vk.png"/>
+                   Margin="10,10,0,0" Source="/Pages/vk.png"/>
             <Image Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="50,10,0,0" Source="C:\Users\ЗС\Source\Repos\FurnitureStore_Toshmatov\FurnitureStore_Toshmatov\Pages\telegramm.png"/>
+                   Margin="50,10,0,0" Source="/Pages/telegramm.png"/>
+
             <Label Content="Мебельная компания" Margin="140,5,140,5" Foreground="#FFFFFF" 
                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
                    FontSize="20" FontWeight="Bold" />
@@ -42,7 +43,7 @@
                     Content="Корзина (0)"/>
         </Grid>
 
-        <ScrollViewer Margin="5,55,-41,-12" 
+        <ScrollViewer Margin="5,55,0,-12" 
                       HorizontalScrollBarVisibility="Auto" 
                       VerticalScrollBarVisibility="Hidden">
             <StackPanel x:Name="parent" Orientation="Horizontal" />
