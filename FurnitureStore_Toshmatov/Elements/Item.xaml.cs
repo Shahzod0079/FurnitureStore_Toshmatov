@@ -65,9 +65,12 @@ namespace FurnitureStore_Toshmatov.Elements
         {
             if (count > 0 && currentItem != null)
             {
-                MessageBox.Show($"Добавлено в корзину: {currentItem.Name} x {count} шт.");
+                MainWindow.Instance.AddToCart(currentItem, count);
                 count = 0;
                 UpdateCounter();
+
+                // ОБНОВЛЯЕМ СЧЕТЧИК НА ГЛАВНОЙ СТРАНИЦЕ
+                MainWindow.Instance.UpdateCartCounter();
             }
             else
             {
