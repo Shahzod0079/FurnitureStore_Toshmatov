@@ -1,28 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+using System.IO;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FurnitureStore_Toshmatov.Elements
 {
-    /// <summary>
-    /// Логика взаимодействия для Item.xaml
-    /// </summary>
     public partial class Item : UserControl
     {
-        public Item(Pages.Item item)
+        public Item(Classes.Item item)
         {
             InitializeComponent();
+
+            if (item != null)
+            {
+                string imagePath = $"Images/Items/{item.ImageSrc}";
+
+                string placeholderPath = "Images/i (1).png";
+
+                if (File.Exists(imagePath))
+                {
+                    image.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative));
+                }
+                else if (File.Exists(placeholderPath))
+                {
+                    image.Source = new BitmapImage(new Uri(placeholderPath, UriKind.Relative));
+                }
+
+                price.Content = item.Price.ToString("C0");
+                name.Content = item.Name;
+            }
         }
     }
 }

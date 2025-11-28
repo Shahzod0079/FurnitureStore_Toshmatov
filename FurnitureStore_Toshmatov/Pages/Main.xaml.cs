@@ -20,13 +20,15 @@ namespace FurnitureStore_Toshmatov.Pages
     /// </summary>
     public partial class Main : Page
     {
-        public List<Item> items = new List<Item>();
+        // ИЗМЕНИТЕ: List<Item> на List<Classes.Item>
+        public List<Classes.Item> items = new List<Classes.Item>();
 
         public Main()
         {
             InitializeComponent();
 
-            items.Add(new Item("Шкаф", 20000, "background.jpg"));
+            // ИЗМЕНИТЕ: new Item() на new Classes.Item()
+            items.Add(new Classes.Item("Шкаф", 20000, "background.jpg"));
 
             LoadItems();
         }
@@ -38,27 +40,11 @@ namespace FurnitureStore_Toshmatov.Pages
         {
             parent.Children.Clear();
 
-            foreach (Item item in items)
+            // ИЗМЕНИТЕ: Item на Classes.Item
+            foreach (Classes.Item item in items)
             {
                 parent.Children.Add(new Elements.Item(item));
             }
-        }
-    }
-
-    /// <summary>
-    /// Класс Item должен быть определен
-    /// </summary>
-    public class Item
-    {
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public string ImagePath { get; set; }
-
-        public Item(string name, decimal price, string imagePath)
-        {
-            Name = name;
-            Price = price;
-            ImagePath = imagePath;
         }
     }
 }
